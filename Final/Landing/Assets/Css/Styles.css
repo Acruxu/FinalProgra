@@ -276,6 +276,36 @@ table tr td{
 	margin-top: 0.8em;
 	width: 75%;
 }
+
+
+/*Alerta*/
+
+#cuadrodata{
+	width: 50%;
+	height: 80%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+    align-items: flex-start;
+    background:#F8EECB;
+    padding: 2em;
+    margin-bottom: 2em;
+    border: 1px solid #CF9A5E;
+    display: none;
+}
+
+#cuadrodata h3{
+	font-family: 'Oswald',sans-serif;
+}
+
+#cuadrodata p{
+	margin-top: 2em;
+	font-family: 'Karla', sans-serif;
+}
+
+
+
+
 /*-------------------------------Form */
 #secformulario{
 	display: flex;

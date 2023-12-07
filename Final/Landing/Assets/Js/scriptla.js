@@ -20,6 +20,19 @@ var botonexpo = document.getElementById("expo");
 var aparicionul = document.getElementById("botonesocultos");
 
 //variable del form
+var inputnombre = document.getElementById("nombre");
+var inputedad = document.getElementById("edad");
+var inputgmail = document.getElementById("gmail");
+var inputtelefono = document.getElementById("telefono");
+var selecttrabajo = document.getElementById("puestodetrabajo");
+var botonenvio = document.getElementById("enviodata");
+var alerta = document.getElementById("cuadrodata");
+var ps = document.getElementsByClassName("infoformulario");
+var secformulari = document.getElementById("secformulario");
+var alerta =document.getElementById("cuadrodata");
+var acepto = document.getElementById("deacuerdo");
+console.log(inputnombre);
+console.log(acepto);
 
 
 //Cambio a la seccion de trabajo
@@ -38,6 +51,7 @@ cambiota.onclick=function(){
 	infogeneral.style.display="none";
 	secciontrabajo.style.display="none";
 	seccionform.style.display="none";
+	alerta.style.display="none"
 	tabla.style.display="block";
 	seccionexposicion.style.display="none";
 }
@@ -59,10 +73,32 @@ botonexpo.onclick=function(){
 	}
 }
 
+botonenvio.onclick=function(){
+for (var i = 0; i < ps.length; i++) {																	    
+	(function (i){
+	ps[0].innerHTML = ("Tu nombre: " + inputnombre.value);
+	ps[1].innerHTML = ("Tu edad: " + inputedad.value);
+	ps[2].innerHTML = ("Tu gmail: " + inputgmail.value);
+	ps[3].innerHTML = ("Tu telefono: " + inputtelefono.value);
+	ps[4].innerHTML = ("Aspiras a " + selecttrabajo.value);								 
+	}
+	(i))
+}
+
+if (inputnombre.value == "" || inputgmail.value == "" || inputedad.value == "" || inputtelefono.value == "" || selecttrabajo.value == ""){
+	alert("Complete los campos faltantes porfavor");
+}
+else{
+alerta.style.display="flex"
+secformulari.style.display="none";
+}
+}
 
 
-//document.getElementById("enviodata").addEventListener('click', function(event) {
-//event.preventDefault();
-//console.log('Hiciste clic en el enlace, pero la acción predeterminada se evitó.');
-//});
+
+
+document.getElementById("enviodata").addEventListener('click', function(event) {
+event.preventDefault();
+console.log('Hiciste clic en el enlace, pero la acción predeterminada se evitó.');
+});
 
